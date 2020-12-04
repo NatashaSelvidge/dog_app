@@ -19,6 +19,7 @@ class CLI
     input = get_input
     if input == "1"
       puts "Here is a list of all the dog breeds you can choose from."
+      puts breed_list
     elsif input == "2"
       puts "Please enter a dog breed."
     elsif input == "exit"
@@ -38,5 +39,8 @@ class CLI
     gets.strip
   end 
 
+  def breed_list
+    Breed.all
+  end 
   
 end 

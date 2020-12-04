@@ -1,7 +1,10 @@
 class Breed
-  @@all = []
-
+  @@all = ["Vizsla,", "Husky", "Golden"]
+  attr_accessor :name, :temperament, :life_span
   def initialize
+    @name=name
+    @temperament=temperament
+    @life_span=life_span
     save 
   end 
 
