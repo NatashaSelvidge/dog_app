@@ -4,7 +4,7 @@ class CLI
    puts "Welcome"
 
    puts "Loading..."
-
+    API.load_data
    main_menu_options
   end 
 
@@ -17,11 +17,14 @@ class CLI
 
   def main_menu
     input = get_input
+
     if input == "1"
-      puts "Here is a list of all the dog breeds you can choose from."
+      puts "Here is a list of all the dog breeds you can choose from"
       puts breed_list
+      puts "select a breed"
+      main_menu_options
     elsif input == "2"
-      puts "Please enter a dog breed."
+        breed_choice
     elsif input == "exit"
     puts "Exiting the application."
     else
@@ -40,7 +43,10 @@ class CLI
   end 
 
   def breed_list
-    Breed.all
+    Breed.all.each.with_index(1) do |breed, index|
+      puts "#{index}. #{breed.name}"
+    end 
   end 
+
   
 end 

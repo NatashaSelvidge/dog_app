@@ -1,10 +1,12 @@
 class Breed
-  @@all = ["Vizsla,", "Husky", "Golden"]
-  attr_accessor :name, :temperament, :life_span
-  def initialize
-    @name=name
-    @temperament=temperament
-    @life_span=life_span
+  @@all = []
+  attr_accessor :name, :temperament, :bred_for, :life_span
+
+  def initialize(data)
+    self.name = data["name"]
+    self.temperament = data["temperament"]
+    self.bred_for = data["bred_for"]
+    self.life_span = data["life_span"]
     save 
   end 
 
