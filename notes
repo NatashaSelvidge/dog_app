@@ -1,0 +1,27 @@
+git status 
+
+git add . 
+
+git commit - m "I did something"
+
+git push orgin master 
+
+chmod +x run 
+
+
+Dog app
+https://docs.thedogapi.com
+
+- Welcome the user
+list of all the breeds || enter a breed id  
+list all breeds then 
+- Enter a dog breed id 
+-print out info on to terminal
+-breed name 
+-temperament 
+- life span
+
+
+-CLI CLASS
+-API CLASS
+-BREED CLASS 

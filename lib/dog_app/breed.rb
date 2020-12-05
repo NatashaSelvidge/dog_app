@@ -7,6 +7,7 @@ class Breed
     self.temperament = data["temperament"]
     self.bred_for = data["bred_for"]
     self.life_span = data["life_span"]
+   
     save 
   end 
 

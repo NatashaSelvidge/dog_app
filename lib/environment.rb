@@ -8,4 +8,5 @@ require 'open-uri'
 require 'json' 
 require "pry"
 require 'rest-client'
-
+require 'colorize'
+require 'net/http'
