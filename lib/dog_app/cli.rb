@@ -16,26 +16,33 @@ class CLI
            puts " "
    puts "Loading..."
     API.load_data
+   
    main_menu_options
   end 
 
   def main_menu_options
+    puts "*-*-*-*-*-*-*-*-*".blue
     puts "Type '1' to get a list of dog breeds."
-    puts "Type '2' if you already know the number of the breed."
+    puts "Type '2' to input the name of the breed."
     puts "Type 'exit' to exit the app."
+    puts "*-*-*-*-*-*-*-*-*".blue
     main_menu
   end 
 
   def main_menu
     input = get_input
-
+puts "*-*-*-*-*-*-*-*-*".blue
     if input == "1"
       breed_list
       main_menu_options
     elsif input == "2"
-      breed_details_menu_options
+    puts "please enter a breed name."
+    breed = Breed.find_by_name(gets.chomp)
+     print_breed_details(breed)
+      main_menu_options
     elsif input == "exit"
-    puts "Exiting the application."
+    puts "Exiting the application." 
+    exit
     else
       invalid_choice
       main_menu_options
@@ -43,11 +50,13 @@ class CLI
   end 
 
   def invalid_choice
+    "*-*-*-*-*-*-*-*-*".red
     puts "Invalid choice please try again."
+    "*-*-*-*-*-*-*-*-*".red
   end 
 
   def get_input
-    puts "Enter a choice."
+    puts "Enter a number."
     gets.strip
   end 
 
@@ -87,24 +96,32 @@ class CLI
     puts " "
     puts "*-*-*-*-*-*-*-*-*".blue
     puts "Breed: #{breed.name}".green
-    puts "Temperament: #{breed.temperament}".green
-    puts "Bred For: #{breed.bred_for}".green
     puts "Life Span: #{breed.life_span}".green
+    puts "Bred For: #{breed.bred_for}".green
+    puts "Temperament: #{breed.temperament}".green
     puts "*-*-*-*-*-*-*-*-*".blue
     puts " "
+    select_or_exit
   end 
 
   def select_or_exit
+    puts "*-*-*-*-*-*-*-*-*".blue
     puts "Would you like to go back or exit?"
-    puts "'1' for main or '2' for exit application"
+    puts " Type '1' for the main menu or 'exit' to exit the application"
     input = get_input
     if input == '1'
       main_menu_options
     elsif input == "exit"
+      puts "Exiting application..."
       puts "GoodBye"
+      exit 
     else
       invalid_choice
-      select_or_exit
+      main_menu_options
+    end 
+
+    def exit
+      exit!
     end 
 end
 

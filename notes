@@ -16,10 +16,11 @@ https://docs.thedogapi.com
 list of all the breeds || enter a breed id  
 list all breeds then 
 - Enter a dog breed id 
--print out info on to terminal
--breed name 
--temperament 
-- life span
+-put out info on to terminal
+  -breed name 
+  - life span
+  -bred for
+  -temperament 
 
 
 -CLI CLASS
