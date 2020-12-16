@@ -1,8 +1,6 @@
 # DogApp
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dog_app`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Doggo App is an application to find information on any dog breed. This application will list all of the different dog breeds and their id number's for you to enter, or you can directly type in the name of the specific dog breed you wish to know more about, such as what they are bred for, expected life span, and temperament.
 
 ## Installation
 
@@ -33,7 +31,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/dog_app. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/dog_app/blob/master/CODE_OF_CONDUCT.md).
-
 
 ## License
 

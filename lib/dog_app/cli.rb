@@ -23,7 +23,7 @@ class CLI
   def main_menu_options
     puts "*-*-*-*-*-*-*-*-*".blue
     puts "Type '1' to get a list of dog breeds."
-    puts "Type '2' to input the name of the breed."
+    puts "Type '2' to enter a breed name."
     puts "Type 'exit' to exit the app."
     puts "*-*-*-*-*-*-*-*-*".blue
     main_menu
@@ -36,7 +36,7 @@ puts "*-*-*-*-*-*-*-*-*".blue
       breed_list
       main_menu_options
     elsif input == "2"
-    puts "please enter a breed name."
+      puts "Please enter a breed name."
     breed = Breed.find_by_name(gets.chomp)
      print_breed_details(breed)
       main_menu_options

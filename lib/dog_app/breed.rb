@@ -7,20 +7,17 @@ class Breed
     self.temperament = data["temperament"]
     self.bred_for = data["bred_for"]
     self.life_span = data["life_span"]
-     
+    @@all << self 
+    
   end 
 
   def self.all
     @@all
   end 
 
-  def save 
-    @@all << self
-  end 
-
   def self.find_by_name(name)
     @@all.find do |b|
-      b.name.downcase == name.downcase
+      b.name.downcase == name.downcase 
     end 
   end 
   
